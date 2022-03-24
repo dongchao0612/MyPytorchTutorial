@@ -20,7 +20,8 @@ tensorboard运行日志
 
 ## dataset
 
-存放蚂蚁和蜜蜂的数据的训练集和验证集：链接: https://pan.baidu.com/s/1jZoTmoFzaTLWh4lKBHVbEA 密码: 5suq 
+存放蚂蚁和蜜蜂的数据的训练集和验证集
+链接: https://pan.baidu.com/s/1jZoTmoFzaTLWh4lKBHVbEA 密码: 5suq 
 
 ## img
 
