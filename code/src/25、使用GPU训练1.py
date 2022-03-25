@@ -35,9 +35,9 @@ if __name__ == '__main__':
     test_data = torchvision.datasets.CIFAR10(root="CIFAR10", train=False, transform=torchvision.transforms.ToTensor(),
                                              download=True)
     # 获取数据集长度
-    train_data_size = len(train_data)
-    test_data_size = len(test_data)
-    print(f"训练数据集的长度：{train_data_size}，测试数据集的长度：{test_data_size}")  # 50000，10000
+    #train_data_size = len(train_data)
+    #test_data_size = len(test_data)
+    print(f"训练数据集的长度：{train_data.__len__()}，测试数据集的长度：{test_data.__len__()}")  # 50000，10000
     # 利用DataLoader加载数据集
     train_data_loader = DataLoader(train_data, batch_size=64)
     test_data_loader = DataLoader(test_data, batch_size=64)
@@ -107,8 +107,8 @@ if __name__ == '__main__':
 
         print(f"整体测试集的Loss：{total_test_loss}")
         writer.add_scalar("total_test_loss", total_test_loss, i)
-        print(f"整体测试集的Accuacy：{total_accuracy / test_data_size}")
-        writer.add_scalar("total_accuracy", total_accuracy / test_data_size, i)
+        print(f"整体测试集的Accuacy：{total_accuracy / test_data.__len__()}")
+        writer.add_scalar("total_accuracy", total_accuracy / test_data.__len__(), i)
 
         torch.save(m, f"model/mymodule_{i}.pth")
         print("模型已经保存")
