@@ -81,7 +81,7 @@ if __name__ == '__main__':
             total_train_step += 1
 
             if total_train_step % 100 == 0:
-                print(f"训练次数 {total_train_step} ， 测试损失值 {loss.item()}")
+                print(f"训练次数 {total_train_step} ， 训练损失值 {loss.item()}")
             writer.add_scalar("train_loss", loss.item(), total_train_step)
         print(f"整体训练集的Loss：{total_train_loss}")
         writer.add_scalar("total_train_loss", total_train_loss, global_step=i)
